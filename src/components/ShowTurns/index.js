@@ -6,7 +6,7 @@ export default function ShowTurns({ turns }) {
   return (
     <Container>
       <span>{turns}</span>
-      <span>turns</span>
+      <span>Voltas</span>
     </Container>
   );
 }

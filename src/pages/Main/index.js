@@ -43,13 +43,23 @@ export default function Main() {
   return (
     <Container>
       <ShowTurns turns={numberOfTurns} />
-      <Button type="button" text="+" onClick={increment} />
-      <Button type="button" text="-" onClick={decrement} />
+
+      <div className="buttons">
+        <Button type="button" text="+" onClick={increment} />
+        <Button type="button" text="-" onClick={decrement} />
+      </div>
       {numberOfTurns > 0 && (
         <ShowTime time={Math.round(time / numberOfTurns)} />
       )}
-      <Button type="button" text="Iniciar" onClick={toggleRunning} />
-      <Button type="button" text="Reiniciar" onClick={reset} />
+
+      <div className="buttons">
+        <Button
+          type="button"
+          text={running ? 'Parar' : 'Iniciar'}
+          onClick={toggleRunning}
+        />
+        <Button type="button" text="Reiniciar" onClick={reset} />
+      </div>
     </Container>
   );
 }

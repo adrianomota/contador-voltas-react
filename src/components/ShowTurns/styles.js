@@ -9,6 +9,11 @@ export const Container = styled.div`
   flex-direction: column;
 
   span {
-    font-size: 2.5rem;
+    font-size: 15rem;
+    font-weight: bold;
+  }
+  span + span {
+    font-size: 4.8rem;
+    font-weight: normal;
   }
 `;
